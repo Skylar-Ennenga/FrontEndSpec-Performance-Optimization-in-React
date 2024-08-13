@@ -1,9 +1,19 @@
 import React from "react";
+import { useCallback } from "react";
+
 
 const UserSelector = ({ users, onUserSelect }) => {
-  const handleUserSelect = (event) => {
+  
+  
+  
+  const handleUserSelect = useCallback((event) => {
     onUserSelect(Number(event.target.value));
-  }
+  },[onUserSelect]);
+
+
+
+
+  
   return (
     <select onChange={handleUserSelect}>
       <option value="">Select a user</option>

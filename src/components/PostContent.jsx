@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const PostContent = ({ content }) => {
   return (
     <div>
@@ -18,4 +19,4 @@ const PostContent = ({ content }) => {
   );
 };
 
-export default PostContent;
+export default React.memo(PostContent);
